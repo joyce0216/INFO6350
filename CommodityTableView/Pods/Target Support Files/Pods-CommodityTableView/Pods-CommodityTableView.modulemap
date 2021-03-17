@@ -1,0 +1,6 @@
+framework module Pods_CommodityTableView {
+  umbrella header "Pods-CommodityTableView-umbrella.h"
+
+  export *
+  module * { export * }
+}
