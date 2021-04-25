@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+class ModelRestaurant{
+    var resName : String = ""
+    var status : String = ""
+    var rating : Float = 0.0
+    var address : String = ""
+    var imageData : Data = Data()
+}
