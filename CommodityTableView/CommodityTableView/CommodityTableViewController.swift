@@ -15,6 +15,7 @@ class CommodityTableViewController: UITableViewController {
     
     var newsTxtField : UITextField?
     var commodityArr: [Commodity] = [Commodity]()
+    var commodityArr2: [Commodity] = [Commodity]()
 
     @IBOutlet var tblCommodity: UITableView!
     
@@ -61,7 +62,7 @@ class CommodityTableViewController: UITableViewController {
             .done { (commoditys) in
                 self.commodityArr = [Commodity]()
                 for commodity in commoditys {
-                    self.commodityArr.append(commodity)
+                self.commodityArr.append(commodity)
                 }
                 
                 self.tblCommodity.reloadData()
@@ -101,8 +102,8 @@ class CommodityTableViewController: UITableViewController {
             else {
                 seal.reject(response.error!)
             }
-        }// end of AF request
-        }//End of Promise return
-    }// End of function
+        }
+        }
+    }
 
 }
