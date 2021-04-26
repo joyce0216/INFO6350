@@ -52,7 +52,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDa
         return cell
     }
     
-
+    
+    @IBAction func btnLogin(_ sender: Any) {
+        self.performSegue(withIdentifier: "goLoginSegue", sender: self)
+    }
+    
     //MARK: Location Manager functions
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error.localizedDescription)
