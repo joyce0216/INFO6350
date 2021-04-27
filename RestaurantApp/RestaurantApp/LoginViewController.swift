@@ -46,7 +46,7 @@ class LoginViewController: UIViewController {
                 return
             }
             
-            self.performSegue(withIdentifier: "LoginSegue", sender: self)
+            self.performSegue(withIdentifier: "restaurantSegue", sender: self)
         }
     }
     

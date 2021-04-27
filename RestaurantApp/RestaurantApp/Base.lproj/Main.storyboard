@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VnI-5k-9wS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nsW-J3-Xfi">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,10 +8,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController wantsFullScreenLayout="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="RestaurantApp" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController title="Login" wantsFullScreenLayout="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="RestaurantApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,17 +71,16 @@
                             <constraint firstItem="NoM-B9-v54" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zOS-ZD-FIi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="sVI-VV-dQe"/>
+                    <navigationItem key="navigationItem" title="Login" id="sVI-VV-dQe"/>
                     <connections>
                         <outlet property="lblStatus" destination="eFV-ig-PO9" id="Wyh-ys-ARt"/>
                         <outlet property="txtEmail" destination="JyE-gt-VF8" id="VzP-N5-7fZ"/>
                         <outlet property="txtPassword" destination="NoM-B9-v54" id="gvd-3M-m7s"/>
-                        <segue destination="SEm-dF-4on" kind="show" identifier="LoginSegue" id="GPK-7Q-LRN"/>
+                        <segue destination="VnI-5k-9wS" kind="show" identifier="restaurantSegue" animates="NO" id="deO-EJ-PSD"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1228" y="87"/>
+            <point key="canvasLocation" x="313" y="96"/>
         </scene>
         <!--Favorite Restaurants-->
         <scene sceneID="H0f-Bd-foG">
@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IYb-nw-zoT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2030" y="112"/>
+            <point key="canvasLocation" x="2028" y="86"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BEH-q9-N8X">
@@ -109,7 +109,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="VnI-5k-9wS" kind="relationship" relationship="rootViewController" id="kbi-um-q4P"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eAv-ag-DUZ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HBk-We-5bv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -157,22 +157,16 @@
                             <constraint firstItem="kEY-5E-hE2" firstAttribute="trailing" secondItem="jRY-oA-f1c" secondAttribute="trailing" constant="20" id="pY2-0n-PjN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="fG8-Ce-ksj">
-                        <barButtonItem key="rightBarButtonItem" title="Login" id="CQI-Pc-IrR">
-                            <connections>
-                                <action selector="btnLogin:" destination="VnI-5k-9wS" id="dzD-yN-iYR"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Restaurant" id="fG8-Ce-ksj"/>
                     <connections>
                         <outlet property="lblNearby" destination="jRY-oA-f1c" id="APZ-Gz-h7d"/>
                         <outlet property="tblRestaurant" destination="HM7-yR-7A5" id="jPU-xi-8Jx"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="goLoginSegue" id="Oe9-xa-1VW"/>
+                        <segue destination="SEm-dF-4on" kind="show" identifier="FavSegue" id="A94-bA-5D5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Fr-0A-9hY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="334.78260869565219" y="95.758928571428569"/>
+            <point key="canvasLocation" x="1235" y="86"/>
         </scene>
     </scenes>
     <resources>

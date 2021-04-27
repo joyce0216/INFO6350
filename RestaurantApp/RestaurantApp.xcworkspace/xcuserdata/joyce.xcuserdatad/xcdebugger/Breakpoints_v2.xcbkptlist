@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "479F6F80-A4B2-4CE8-84EC-3950E18ADDB3"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7F350DCA-D12D-4BF7-923F-58A4AE881BEE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RestaurantApp/ViewModel/RestaurantViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "getRestaurant(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7F350DCA-D12D-4BF7-923F-58A4AE881BEE - 9998b646b04531b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (PromiseKit.Resolver&lt;Swift.Array&lt;RestaurantApp.ModelRestaurant&gt;&gt;) -&gt; () in RestaurantApp.RestaurantViewModel.getRestaurant(Swift.String) -&gt; PromiseKit.Promise&lt;Swift.Array&lt;RestaurantApp.ModelRestaurant&gt;&gt;"
+                  moduleName = "RestaurantApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joyce/Documents/Git/INFO6350/RestaurantApp/RestaurantApp/ViewModel/RestaurantViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "7F350DCA-D12D-4BF7-923F-58A4AE881BEE - a00b1d321fd60565"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SwiftyJSON.JSON) -&gt; () in closure #1 (PromiseKit.Resolver&lt;Swift.Array&lt;RestaurantApp.ModelRestaurant&gt;&gt;) -&gt; () in RestaurantApp.RestaurantViewModel.getRestaurant(Swift.String) -&gt; PromiseKit.Promise&lt;Swift.Array&lt;RestaurantApp.ModelRestaurant&gt;&gt;"
+                  moduleName = "RestaurantApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joyce/Documents/Git/INFO6350/RestaurantApp/RestaurantApp/ViewModel/RestaurantViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "189">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

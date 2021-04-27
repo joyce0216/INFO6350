@@ -11,13 +11,20 @@ import Alamofire
 import SwiftSpinner
 import SwiftyJSON
 import PromiseKit
+import FirebaseDatabase
 
 class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tblRestaurant: UITableView!
     
     @IBOutlet weak var lblNearby: UILabel!
-        
+    
+    private let database = Database.database().reference()
+
+    
+    
+    
+    
     let locationManager = CLLocationManager()
     var newsTxtField : UITextField?
     var restaurantArr: [ModelRestaurant] = [ModelRestaurant]()
@@ -52,10 +59,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDa
         return cell
     }
     
-    
-    @IBAction func btnLogin(_ sender: Any) {
-        self.performSegue(withIdentifier: "goLoginSegue", sender: self)
-    }
+
+//    @IBAction func btnLogin(_ sender: Any) {
+//        self.performSegue(withIdentifier: "goLoginSegue", sender: self)
+//    }
     
     //MARK: Location Manager functions
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
