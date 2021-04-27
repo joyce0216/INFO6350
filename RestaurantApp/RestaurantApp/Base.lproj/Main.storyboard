@@ -52,6 +52,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oZ-mF-3dA">
+                                <rect key="frame" x="20" y="548" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7PO-Oz-Qka"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Create Account"/>
+                                <connections>
+                                    <action selector="btnSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dyP-Z5-CFh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -59,14 +70,17 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eFV-ig-PO9" secondAttribute="trailing" constant="20" id="46e-U7-xel"/>
                             <constraint firstItem="NoM-B9-v54" firstAttribute="top" secondItem="JyE-gt-VF8" secondAttribute="bottom" constant="30" id="7pv-n7-MwG"/>
                             <constraint firstItem="JyE-gt-VF8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="8SM-tM-Ju0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5oZ-mF-3dA" secondAttribute="trailing" constant="20" id="AYG-5B-Pou"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NoM-B9-v54" secondAttribute="trailing" constant="20" id="EFN-u4-gOH"/>
                             <constraint firstItem="UgD-0f-rOC" firstAttribute="top" secondItem="NoM-B9-v54" secondAttribute="bottom" constant="40" id="JXV-DQ-WFY"/>
+                            <constraint firstItem="5oZ-mF-3dA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="N5p-UE-BlM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JyE-gt-VF8" secondAttribute="trailing" constant="20" id="RyW-bm-2Oc"/>
                             <constraint firstItem="eFV-ig-PO9" firstAttribute="top" secondItem="UgD-0f-rOC" secondAttribute="bottom" constant="30" id="VeV-CO-S3B"/>
                             <constraint firstItem="UgD-0f-rOC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XpL-XA-p5e"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UgD-0f-rOC" secondAttribute="trailing" constant="20" id="g0g-P7-6TQ"/>
                             <constraint firstItem="eFV-ig-PO9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gUG-7R-nXs"/>
                             <constraint firstItem="JyE-gt-VF8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kEb-d2-t8d"/>
+                            <constraint firstItem="5oZ-mF-3dA" firstAttribute="top" secondItem="eFV-ig-PO9" secondAttribute="bottom" constant="40" id="sdc-Y6-Zas"/>
                             <constraint firstItem="NoM-B9-v54" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zOS-ZD-FIi"/>
                         </constraints>
                     </view>
@@ -98,6 +112,70 @@
             </objects>
             <point key="canvasLocation" x="2028" y="86"/>
         </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="FD0-LI-NBX">
+            <objects>
+                <viewController storyboardIdentifier="signUp" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8LA-0b-Ebf" customClass="SignUpViewController" customModule="RestaurantApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZaL-jv-O2o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6zA-Qo-jl6">
+                                <rect key="frame" x="20" y="344" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aiB-jk-mWh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gY2-XY-4dW">
+                                <rect key="frame" x="20" y="454" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="CRH-0J-s9b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Sign Up"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1Z-Bw-PLC">
+                                <rect key="frame" x="20" y="544" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="XI1-K3-p1Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Already Have an Account? Login"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cLG-Vq-O8s">
+                                <rect key="frame" x="20" y="244" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="T8K-5o-j46"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aYd-ya-Kov"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aYd-ya-Kov" firstAttribute="trailing" secondItem="cLG-Vq-O8s" secondAttribute="trailing" constant="20" id="1Aw-bY-s6f"/>
+                            <constraint firstItem="aYd-ya-Kov" firstAttribute="trailing" secondItem="gY2-XY-4dW" secondAttribute="trailing" constant="20" id="8b8-Oi-Wfh"/>
+                            <constraint firstItem="cLG-Vq-O8s" firstAttribute="leading" secondItem="aYd-ya-Kov" secondAttribute="leading" constant="20" id="GEG-AI-Vc3"/>
+                            <constraint firstItem="gY2-XY-4dW" firstAttribute="top" secondItem="6zA-Qo-jl6" secondAttribute="bottom" constant="60" id="GKI-iN-Gwj"/>
+                            <constraint firstItem="6zA-Qo-jl6" firstAttribute="leading" secondItem="aYd-ya-Kov" secondAttribute="leading" constant="20" id="GqB-1w-Md7"/>
+                            <constraint firstItem="6zA-Qo-jl6" firstAttribute="top" secondItem="cLG-Vq-O8s" secondAttribute="bottom" constant="50" id="Gye-EH-xpP"/>
+                            <constraint firstItem="aYd-ya-Kov" firstAttribute="trailing" secondItem="6zA-Qo-jl6" secondAttribute="trailing" constant="20" id="Hka-l8-Jse"/>
+                            <constraint firstItem="aYd-ya-Kov" firstAttribute="trailing" secondItem="q1Z-Bw-PLC" secondAttribute="trailing" constant="20" id="aSV-wm-M3V"/>
+                            <constraint firstItem="6zA-Qo-jl6" firstAttribute="top" secondItem="cLG-Vq-O8s" secondAttribute="bottom" constant="50" id="dLp-Np-kYI"/>
+                            <constraint firstItem="q1Z-Bw-PLC" firstAttribute="leading" secondItem="aYd-ya-Kov" secondAttribute="leading" constant="20" id="gtu-My-ewW"/>
+                            <constraint firstItem="gY2-XY-4dW" firstAttribute="leading" secondItem="aYd-ya-Kov" secondAttribute="leading" constant="20" id="iBC-MQ-iC5"/>
+                            <constraint firstItem="q1Z-Bw-PLC" firstAttribute="top" secondItem="gY2-XY-4dW" secondAttribute="bottom" constant="50" id="rH8-zy-U5g"/>
+                            <constraint firstItem="cLG-Vq-O8s" firstAttribute="top" secondItem="aYd-ya-Kov" secondAttribute="top" constant="200" id="x22-DI-ZCp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yfk-ZD-sbJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2908.6956521739135" y="85.714285714285708"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="BEH-q9-N8X">
             <objects>
@@ -119,7 +197,7 @@
         <!--Restaurant-->
         <scene sceneID="jBx-Et-9hv">
             <objects>
-                <viewController title="Restaurant" wantsFullScreenLayout="YES" id="VnI-5k-9wS" customClass="ViewController" customModule="RestaurantApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" title="Restaurant" wantsFullScreenLayout="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VnI-5k-9wS" customClass="ViewController" customModule="RestaurantApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7S0-UY-Pto">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

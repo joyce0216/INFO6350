@@ -17,6 +17,7 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
     
     @IBOutlet weak var lblStatus: UILabel!
     
+    
     var userId : String = ""
     
     override func viewDidLoad() {
@@ -50,6 +51,15 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
             self.performSegue(withIdentifier: "restaurantSegue", sender: self)
         }
     }
+    
+    
+    @IBAction func btnSignUp(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "signUp")
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: true)
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "restaurantSegue" {
