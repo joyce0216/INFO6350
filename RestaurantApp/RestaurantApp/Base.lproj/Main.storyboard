@@ -11,7 +11,7 @@
         <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Login" wantsFullScreenLayout="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="RestaurantApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" title="Login" wantsFullScreenLayout="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="RestaurantApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,12 +84,13 @@
                             <constraint firstItem="NoM-B9-v54" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zOS-ZD-FIi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Login" leftItemsSupplementBackButton="YES" id="sVI-VV-dQe"/>
+                    <navigationItem key="navigationItem" title="Login" id="sVI-VV-dQe"/>
                     <connections>
                         <outlet property="lblStatus" destination="eFV-ig-PO9" id="Wyh-ys-ARt"/>
                         <outlet property="txtEmail" destination="JyE-gt-VF8" id="VzP-N5-7fZ"/>
                         <outlet property="txtPassword" destination="NoM-B9-v54" id="gvd-3M-m7s"/>
                         <segue destination="VnI-5k-9wS" kind="show" identifier="restaurantSegue" animates="NO" id="deO-EJ-PSD"/>
+                        <segue destination="8LA-0b-Ebf" kind="show" id="DuK-H5-A6u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -110,9 +111,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IYb-nw-zoT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2028" y="86"/>
+            <point key="canvasLocation" x="2503" y="231"/>
         </scene>
-        <!--Sign Up View Controller-->
+        <!--SignUp-->
         <scene sceneID="FD0-LI-NBX">
             <objects>
                 <viewController storyboardIdentifier="signUp" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8LA-0b-Ebf" customClass="SignUpViewController" customModule="RestaurantApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -121,7 +122,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6zA-Qo-jl6">
-                                <rect key="frame" x="20" y="344" width="374" height="50"/>
+                                <rect key="frame" x="20" y="388" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="aiB-jk-mWh"/>
                                 </constraints>
@@ -129,23 +130,29 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gY2-XY-4dW">
-                                <rect key="frame" x="20" y="454" width="374" height="40"/>
+                                <rect key="frame" x="20" y="498" width="374" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="CRH-0J-s9b"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="btnSignUp:" destination="8LA-0b-Ebf" eventType="touchUpInside" id="Hv5-3z-7DF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1Z-Bw-PLC">
-                                <rect key="frame" x="20" y="544" width="374" height="40"/>
+                                <rect key="frame" x="20" y="588" width="374" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="XI1-K3-p1Q"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Already Have an Account? Login"/>
+                                <connections>
+                                    <action selector="btnBackLogin:" destination="8LA-0b-Ebf" eventType="touchUpInside" id="ynk-5Q-2lr"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cLG-Vq-O8s">
-                                <rect key="frame" x="20" y="244" width="374" height="50"/>
+                                <rect key="frame" x="20" y="288" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="T8K-5o-j46"/>
                                 </constraints>
@@ -171,10 +178,15 @@
                             <constraint firstItem="cLG-Vq-O8s" firstAttribute="top" secondItem="aYd-ya-Kov" secondAttribute="top" constant="200" id="x22-DI-ZCp"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="SignUp" id="d2x-IA-z4d"/>
+                    <connections>
+                        <outlet property="txtEmail" destination="cLG-Vq-O8s" id="R64-Fn-5Zq"/>
+                        <outlet property="txtPassword" destination="6zA-Qo-jl6" id="rlu-L3-u5t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yfk-ZD-sbJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2908.6956521739135" y="85.714285714285708"/>
+            <point key="canvasLocation" x="1428" y="-361"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BEH-q9-N8X">
@@ -197,7 +209,7 @@
         <!--Restaurant-->
         <scene sceneID="jBx-Et-9hv">
             <objects>
-                <viewController storyboardIdentifier="Login" title="Restaurant" wantsFullScreenLayout="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VnI-5k-9wS" customClass="ViewController" customModule="RestaurantApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Restaurant" wantsFullScreenLayout="YES" id="VnI-5k-9wS" customClass="ViewController" customModule="RestaurantApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7S0-UY-Pto">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,7 +259,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Fr-0A-9hY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1235" y="86"/>
+            <point key="canvasLocation" x="1304" y="368"/>
         </scene>
     </scenes>
     <resources>

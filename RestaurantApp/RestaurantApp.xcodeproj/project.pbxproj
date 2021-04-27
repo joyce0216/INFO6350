@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7700E7A2E58A5669DA71DAAC /* Pods_RestaurantApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC261CF876F161D76EB1C7F4 /* Pods_RestaurantApp.framework */; };
 		E924A16326379003000DAAF3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E924A16226379003000DAAF3 /* GoogleService-Info.plist */; };
+		E92D6B852638AF5A001C89D0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92D6B842638AF5A001C89D0 /* SignUpViewController.swift */; };
 		E94103F726352A7400E7D05A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94103F626352A7400E7D05A /* AppDelegate.swift */; };
 		E94103F926352A7400E7D05A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94103F826352A7400E7D05A /* SceneDelegate.swift */; };
 		E94103FB26352A7400E7D05A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94103FA26352A7400E7D05A /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 		77A5A35B1C0C26B9EE508A61 /* Pods-RestaurantApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantApp.release.xcconfig"; path = "Target Support Files/Pods-RestaurantApp/Pods-RestaurantApp.release.xcconfig"; sourceTree = "<group>"; };
 		DC261CF876F161D76EB1C7F4 /* Pods_RestaurantApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E924A16226379003000DAAF3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E92D6B842638AF5A001C89D0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E94103F326352A7400E7D05A /* RestaurantApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E94103F626352A7400E7D05A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E94103F826352A7400E7D05A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				E94103F826352A7400E7D05A /* SceneDelegate.swift */,
 				E941044326352D2800E7D05A /* LoginViewController.swift */,
 				E94103FA26352A7400E7D05A /* ViewController.swift */,
+				E92D6B842638AF5A001C89D0 /* SignUpViewController.swift */,
 				E94103FC26352A7400E7D05A /* Main.storyboard */,
 				E94103FF26352A7400E7D05A /* Assets.xcassets */,
 				E941040126352A7400E7D05A /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E92D6B852638AF5A001C89D0 /* SignUpViewController.swift in Sources */,
 				E941044826352D7500E7D05A /* RestaurantTableViewCell.swift in Sources */,
 				E941044426352D2800E7D05A /* LoginViewController.swift in Sources */,
 				E941043E26352CB400E7D05A /* UtilFunctions.swift in Sources */,
