@@ -13,22 +13,19 @@ import SwiftyJSON
 import PromiseKit
 import FirebaseDatabase
 
-class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UINavigationControllerDelegate,CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tblRestaurant: UITableView!
     
     @IBOutlet weak var lblNearby: UILabel!
     
-    private let database = Database.database().reference()
-
-    
-    
-    
-    
+    var databaseRef = Database.database().reference(fromURL: "https://restaurant-5b82f-default-rtdb.firebaseio.com/")
+ 
     let locationManager = CLLocationManager()
     var newsTxtField : UITextField?
     var restaurantArr: [ModelRestaurant] = [ModelRestaurant]()
     let viewModel = RestaurantViewModel()
+    var userId : String = "Unknown"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,14 +52,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDa
         cell.lblAddress.text = "Address: \(restaurantArr[indexPath.row].address)"
         cell.lblStatus.text = "Status: \(restaurantArr[indexPath.row].status)"
         cell.imgMain.image = UIImage(data: restaurantArr[indexPath.row].imageData, scale: 1)
-        
+ 
         return cell
     }
     
-
-//    @IBAction func btnLogin(_ sender: Any) {
-//        self.performSegue(withIdentifier: "goLoginSegue", sender: self)
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(restaurantArr[indexPath.row].resName)
+        databaseRef.child(userId).setValue(restaurantArr[indexPath.row].resName)
+    }
     
     //MARK: Location Manager functions
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

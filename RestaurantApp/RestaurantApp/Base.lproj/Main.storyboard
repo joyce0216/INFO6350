@@ -11,7 +11,6 @@
         <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController title="Login" wantsFullScreenLayout="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="RestaurantApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -71,7 +70,7 @@
                             <constraint firstItem="NoM-B9-v54" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zOS-ZD-FIi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Login" id="sVI-VV-dQe"/>
+                    <navigationItem key="navigationItem" title="Login" leftItemsSupplementBackButton="YES" id="sVI-VV-dQe"/>
                     <connections>
                         <outlet property="lblStatus" destination="eFV-ig-PO9" id="Wyh-ys-ARt"/>
                         <outlet property="txtEmail" destination="JyE-gt-VF8" id="VzP-N5-7fZ"/>
@@ -79,6 +78,7 @@
                         <segue destination="VnI-5k-9wS" kind="show" identifier="restaurantSegue" animates="NO" id="deO-EJ-PSD"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="313" y="96"/>
         </scene>
@@ -124,9 +124,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HM7-yR-7A5">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HM7-yR-7A5">
                                 <rect key="frame" x="0.0" y="232" width="414" height="630"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="eQv-R6-wPK">
@@ -153,11 +152,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jRY-oA-f1c" firstAttribute="leading" secondItem="kEY-5E-hE2" secondAttribute="leading" constant="20" id="1eD-Cy-Kar"/>
+                            <constraint firstItem="HM7-yR-7A5" firstAttribute="bottom" secondItem="kEY-5E-hE2" secondAttribute="bottom" id="5mT-Rc-SgT"/>
+                            <constraint firstItem="HM7-yR-7A5" firstAttribute="leading" secondItem="kEY-5E-hE2" secondAttribute="leading" id="C1F-hz-0hk"/>
                             <constraint firstItem="jRY-oA-f1c" firstAttribute="top" secondItem="kEY-5E-hE2" secondAttribute="top" constant="60" id="an3-Mc-Ywn" userLabel="Lbl Nearby.top = Safe Area.top + 50"/>
+                            <constraint firstItem="HM7-yR-7A5" firstAttribute="top" secondItem="jRY-oA-f1c" secondAttribute="bottom" constant="44" id="j4v-QH-4E7"/>
+                            <constraint firstItem="HM7-yR-7A5" firstAttribute="trailing" secondItem="kEY-5E-hE2" secondAttribute="trailing" id="olY-3i-dd5"/>
                             <constraint firstItem="kEY-5E-hE2" firstAttribute="trailing" secondItem="jRY-oA-f1c" secondAttribute="trailing" constant="20" id="pY2-0n-PjN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Restaurant" id="fG8-Ce-ksj"/>
+                    <navigationItem key="navigationItem" title="Restaurant" leftItemsSupplementBackButton="YES" id="fG8-Ce-ksj"/>
                     <connections>
                         <outlet property="lblNearby" destination="jRY-oA-f1c" id="APZ-Gz-h7d"/>
                         <outlet property="tblRestaurant" destination="HM7-yR-7A5" id="jPU-xi-8Jx"/>

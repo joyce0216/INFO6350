@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController,UINavigationControllerDelegate {
 
     
     @IBOutlet weak var txtEmail: UITextField!
@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var lblStatus: UILabel!
     
+    var userId : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,5 +51,12 @@ class LoginViewController: UIViewController {
         }
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "restaurantSegue" {
+            if let destinationVC = segue.destination as? ViewController {
+                guard let userID = Auth.auth().currentUser?.uid else { return }
+                destinationVC.userId = userID
+            }
+        }
+    }
 }
