@@ -222,12 +222,20 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Basic Good Vibes Email Header (1)" translatesAutoresizingMaskIntoConstraints="NO" id="oZR-NV-nHN">
-                                <rect key="frame" x="20" y="108" width="374" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Basic Good Vibes Email Header (1)" translatesAutoresizingMaskIntoConstraints="NO" id="oZR-NV-nHN">
+                                <rect key="frame" x="20" y="80" width="374" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="GiE-sV-hM3"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDC-Zu-j8H">
+                                <rect key="frame" x="137" y="195" width="140" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Show Favorite"/>
+                                <connections>
+                                    <action selector="clickOnShowFavorite:" destination="VnI-5k-9wS" eventType="touchDown" id="b3D-GX-7rA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kEY-5E-hE2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -243,6 +251,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Restaurant" leftItemsSupplementBackButton="YES" id="fG8-Ce-ksj"/>
                     <connections>
+                        <outlet property="btnShowFavorite" destination="nDC-Zu-j8H" id="GOa-1R-kza"/>
                         <outlet property="imageRestaurant" destination="oZR-NV-nHN" id="mbz-1I-Utv"/>
                         <outlet property="tblRestaurant" destination="HM7-yR-7A5" id="jPU-xi-8Jx"/>
                     </connections>

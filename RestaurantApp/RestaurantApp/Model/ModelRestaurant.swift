@@ -14,4 +14,5 @@ class ModelRestaurant{
     var address : String = ""
     var placeId : String = ""
     var imageData : Data = Data()
+    var shouldDisplay : Bool = true
 }

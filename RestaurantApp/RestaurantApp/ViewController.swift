@@ -19,12 +19,16 @@ class ViewController: UIViewController, UINavigationControllerDelegate,CLLocatio
     
     @IBOutlet weak var imageRestaurant: UIImageView!
     
+    @IBOutlet weak var btnShowFavorite: UIButton!
+    
     var databaseRef = Database.database().reference(fromURL: "https://restaurant-5b82f-default-rtdb.firebaseio.com/")
  
     let locationManager = CLLocationManager()
     var newsTxtField : UITextField?
     var restaurantArr: [ModelRestaurant] = [ModelRestaurant]()
     var favorites: [String] = [String]()
+    var isFavoriteView: Bool = false
+    
     let viewModel = RestaurantViewModel()
     var userId : String = "Unknown"
 
@@ -65,10 +69,12 @@ class ViewController: UIViewController, UINavigationControllerDelegate,CLLocatio
             if favorites.contains(placeId) { // Remove favorite
                 favorites.remove(at: favorites.firstIndex(of: placeId)!)
                 databaseRef.child(userId).child(placeId).removeValue()
+                
                 cell.btnFavorite.setImage(UIImage(systemName: "heart"), for: .normal)
             } else { // Add favorite
                 favorites.append(placeId)
                 databaseRef.child(userId).child(placeId).setValue(restaurantArr[indexPath.row].resName)
+                
                 cell.btnFavorite.setImage(UIImage(systemName: "heart.fill"), for: .normal)
             }
         }
@@ -76,14 +82,28 @@ class ViewController: UIViewController, UINavigationControllerDelegate,CLLocatio
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let placeId = restaurantArr[indexPath.row].placeId
-        if favorites.contains(placeId) { // Remove favorite
-            favorites.remove(at: favorites.firstIndex(of: placeId)!)
-            databaseRef.child(userId).child(placeId).removeValue()
-        } else { // Add favorite
-            databaseRef.child(userId).child(placeId).setValue(restaurantArr[indexPath.row].resName)
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return restaurantArr[indexPath.row].shouldDisplay ? tableView.rowHeight : 0
+    }
+    
+    @IBAction func clickOnShowFavorite(_ sender: Any) {
+        retrieveFavorites()
+        
+        if (isFavoriteView) { // Bring back to full view
+            for restaurant in restaurantArr {
+                restaurant.shouldDisplay = true
+            }
+        } else { // Bring to favorite view
+            for restaurant in restaurantArr {
+                if !favorites.contains(restaurant.placeId) {
+                    restaurant.shouldDisplay = false
+                }
+            }
         }
+        
+        isFavoriteView = !isFavoriteView
+        
+        self.tblRestaurant.reloadData()
     }
     
     //MARK: Location Manager functions
