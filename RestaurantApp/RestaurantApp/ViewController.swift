@@ -17,7 +17,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate,CLLocatio
     
     @IBOutlet weak var tblRestaurant: UITableView!
     
-    @IBOutlet weak var lblNearby: UILabel!
+    @IBOutlet weak var imageRestaurant: UIImageView!
     
     var databaseRef = Database.database().reference(fromURL: "https://restaurant-5b82f-default-rtdb.firebaseio.com/")
  

@@ -52,6 +52,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Basic Good Vibes Email Header" translatesAutoresizingMaskIntoConstraints="NO" id="E98-gU-Idc">
+                                <rect key="frame" x="20" y="98" width="374" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="QM2-WS-QJT"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oZ-mF-3dA">
                                 <rect key="frame" x="20" y="548" width="374" height="40"/>
                                 <constraints>
@@ -66,20 +72,24 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eFV-ig-PO9" secondAttribute="trailing" constant="20" id="46e-U7-xel"/>
                             <constraint firstItem="NoM-B9-v54" firstAttribute="top" secondItem="JyE-gt-VF8" secondAttribute="bottom" constant="30" id="7pv-n7-MwG"/>
                             <constraint firstItem="JyE-gt-VF8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="8SM-tM-Ju0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5oZ-mF-3dA" secondAttribute="trailing" constant="20" id="AYG-5B-Pou"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NoM-B9-v54" secondAttribute="trailing" constant="20" id="EFN-u4-gOH"/>
+                            <constraint firstItem="E98-gU-Idc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EdQ-X1-vmD"/>
                             <constraint firstItem="UgD-0f-rOC" firstAttribute="top" secondItem="NoM-B9-v54" secondAttribute="bottom" constant="40" id="JXV-DQ-WFY"/>
                             <constraint firstItem="5oZ-mF-3dA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="N5p-UE-BlM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JyE-gt-VF8" secondAttribute="trailing" constant="20" id="RyW-bm-2Oc"/>
                             <constraint firstItem="eFV-ig-PO9" firstAttribute="top" secondItem="UgD-0f-rOC" secondAttribute="bottom" constant="30" id="VeV-CO-S3B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E98-gU-Idc" secondAttribute="trailing" constant="20" id="XZt-5k-IlA"/>
                             <constraint firstItem="UgD-0f-rOC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XpL-XA-p5e"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UgD-0f-rOC" secondAttribute="trailing" constant="20" id="g0g-P7-6TQ"/>
                             <constraint firstItem="eFV-ig-PO9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gUG-7R-nXs"/>
                             <constraint firstItem="JyE-gt-VF8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kEb-d2-t8d"/>
+                            <constraint firstItem="E98-gU-Idc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="naf-E9-NLf"/>
                             <constraint firstItem="5oZ-mF-3dA" firstAttribute="top" secondItem="eFV-ig-PO9" secondAttribute="bottom" constant="40" id="sdc-Y6-Zas"/>
                             <constraint firstItem="NoM-B9-v54" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zOS-ZD-FIi"/>
                         </constraints>
@@ -96,22 +106,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="313" y="96"/>
-        </scene>
-        <!--Favorite Restaurants-->
-        <scene sceneID="H0f-Bd-foG">
-            <objects>
-                <viewController id="SEm-dF-4on" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zPW-2M-Vsd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6WN-l6-bpj"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Favorite Restaurants" id="zcF-a3-zSz"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IYb-nw-zoT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2503" y="231"/>
         </scene>
         <!--SignUp-->
         <scene sceneID="FD0-LI-NBX">
@@ -215,7 +209,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HM7-yR-7A5">
-                                <rect key="frame" x="0.0" y="232" width="414" height="630"/>
+                                <rect key="frame" x="0.0" y="256" width="414" height="606"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="eQv-R6-wPK">
@@ -228,41 +222,69 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Nearby" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRY-oA-f1c">
-                                <rect key="frame" x="20" y="148" width="374" height="40"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Basic Good Vibes Email Header (1)" translatesAutoresizingMaskIntoConstraints="NO" id="oZR-NV-nHN">
+                                <rect key="frame" x="20" y="108" width="374" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="DE5-8L-EaG"/>
+                                    <constraint firstAttribute="height" constant="128" id="GiE-sV-hM3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kEY-5E-hE2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="jRY-oA-f1c" firstAttribute="leading" secondItem="kEY-5E-hE2" secondAttribute="leading" constant="20" id="1eD-Cy-Kar"/>
                             <constraint firstItem="HM7-yR-7A5" firstAttribute="bottom" secondItem="kEY-5E-hE2" secondAttribute="bottom" id="5mT-Rc-SgT"/>
                             <constraint firstItem="HM7-yR-7A5" firstAttribute="leading" secondItem="kEY-5E-hE2" secondAttribute="leading" id="C1F-hz-0hk"/>
-                            <constraint firstItem="jRY-oA-f1c" firstAttribute="top" secondItem="kEY-5E-hE2" secondAttribute="top" constant="60" id="an3-Mc-Ywn" userLabel="Lbl Nearby.top = Safe Area.top + 50"/>
-                            <constraint firstItem="HM7-yR-7A5" firstAttribute="top" secondItem="jRY-oA-f1c" secondAttribute="bottom" constant="44" id="j4v-QH-4E7"/>
+                            <constraint firstItem="HM7-yR-7A5" firstAttribute="top" secondItem="oZR-NV-nHN" secondAttribute="bottom" constant="20" id="JgD-hu-pyw"/>
+                            <constraint firstItem="oZR-NV-nHN" firstAttribute="top" secondItem="kEY-5E-hE2" secondAttribute="top" constant="20" id="Pnd-K5-fxJ"/>
+                            <constraint firstItem="oZR-NV-nHN" firstAttribute="leading" secondItem="kEY-5E-hE2" secondAttribute="leading" constant="20" id="fL5-lD-AoQ"/>
                             <constraint firstItem="HM7-yR-7A5" firstAttribute="trailing" secondItem="kEY-5E-hE2" secondAttribute="trailing" id="olY-3i-dd5"/>
-                            <constraint firstItem="kEY-5E-hE2" firstAttribute="trailing" secondItem="jRY-oA-f1c" secondAttribute="trailing" constant="20" id="pY2-0n-PjN"/>
+                            <constraint firstItem="kEY-5E-hE2" firstAttribute="trailing" secondItem="oZR-NV-nHN" secondAttribute="trailing" constant="20" id="sb3-1o-0vq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Restaurant" leftItemsSupplementBackButton="YES" id="fG8-Ce-ksj"/>
                     <connections>
-                        <outlet property="lblNearby" destination="jRY-oA-f1c" id="APZ-Gz-h7d"/>
+                        <outlet property="imageRestaurant" destination="oZR-NV-nHN" id="mbz-1I-Utv"/>
                         <outlet property="tblRestaurant" destination="HM7-yR-7A5" id="jPU-xi-8Jx"/>
-                        <segue destination="SEm-dF-4on" kind="show" identifier="FavSegue" id="A94-bA-5D5"/>
+                        <segue destination="3EJ-OD-IV0" kind="show" id="Fqa-o9-mfR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Fr-0A-9hY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1304" y="368"/>
+            <point key="canvasLocation" x="1302.8985507246377" y="367.63392857142856"/>
+        </scene>
+        <!--Favorite Restaurants-->
+        <scene sceneID="7Hy-sE-2nD">
+            <objects>
+                <tableViewController id="3EJ-OD-IV0" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ibD-r5-HJ1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="8c0-85-df1">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8c0-85-df1" id="dtC-OD-h4q">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3EJ-OD-IV0" id="v49-8U-Z3y"/>
+                            <outlet property="delegate" destination="3EJ-OD-IV0" id="MPn-VB-bdc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Favorite Restaurants" id="T9G-Oh-0nS"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZdU-8c-I2m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2604" y="319"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Basic Good Vibes Email Header" width="200" height="66.5"/>
+        <image name="Basic Good Vibes Email Header (1)" width="200" height="66.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
