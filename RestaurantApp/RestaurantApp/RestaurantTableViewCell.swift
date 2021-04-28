@@ -15,8 +15,13 @@ class RestaurantTableViewCell: UITableViewCell {
     @IBOutlet weak var lblRating: UILabel!
     @IBOutlet weak var lblStatus: UILabel!
     @IBOutlet weak var imgMain: UIImageView!
+    @IBOutlet weak var btnFavorite: UIButton!
     
-  
+    var actionBlock: (() -> Void)? = nil
+    
+    @IBAction func onClickFavorite(_ sender: Any) {
+        actionBlock?()
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

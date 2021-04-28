@@ -12,5 +12,6 @@ class ModelRestaurant{
     var status : String = ""
     var rating : Float = 0.0
     var address : String = ""
+    var placeId : String = ""
     var imageData : Data = Data()
 }

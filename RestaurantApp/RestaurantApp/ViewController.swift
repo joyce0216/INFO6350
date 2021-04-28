@@ -24,6 +24,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate,CLLocatio
     let locationManager = CLLocationManager()
     var newsTxtField : UITextField?
     var restaurantArr: [ModelRestaurant] = [ModelRestaurant]()
+    var favorites: [String] = [String]()
     let viewModel = RestaurantViewModel()
     var userId : String = "Unknown"
 
@@ -52,13 +53,37 @@ class ViewController: UIViewController, UINavigationControllerDelegate,CLLocatio
         cell.lblAddress.text = "Address: \(restaurantArr[indexPath.row].address)"
         cell.lblStatus.text = "Status: \(restaurantArr[indexPath.row].status)"
         cell.imgMain.image = UIImage(data: restaurantArr[indexPath.row].imageData, scale: 1)
- 
+        
+        let placeId = restaurantArr[indexPath.row].placeId
+        if favorites.contains(placeId) {
+            cell.btnFavorite.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        }
+        
+        cell.actionBlock = { [self] in
+            print("button clicked")
+            
+            if favorites.contains(placeId) { // Remove favorite
+                favorites.remove(at: favorites.firstIndex(of: placeId)!)
+                databaseRef.child(userId).child(placeId).removeValue()
+                cell.btnFavorite.setImage(UIImage(systemName: "heart"), for: .normal)
+            } else { // Add favorite
+                favorites.append(placeId)
+                databaseRef.child(userId).child(placeId).setValue(restaurantArr[indexPath.row].resName)
+                cell.btnFavorite.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            }
+        }
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(restaurantArr[indexPath.row].resName)
-        databaseRef.child(userId).setValue(restaurantArr[indexPath.row].resName)
+        let placeId = restaurantArr[indexPath.row].placeId
+        if favorites.contains(placeId) { // Remove favorite
+            favorites.remove(at: favorites.firstIndex(of: placeId)!)
+            databaseRef.child(userId).child(placeId).removeValue()
+        } else { // Add favorite
+            databaseRef.child(userId).child(placeId).setValue(restaurantArr[indexPath.row].resName)
+        }
     }
     
     //MARK: Location Manager functions
@@ -74,6 +99,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate,CLLocatio
             let lng = currLocation.coordinate.longitude
             
             searchRestaurant(lat, lng)
+            retrieveFavorites()
         }
     }
     
@@ -92,6 +118,19 @@ class ViewController: UIViewController, UINavigationControllerDelegate,CLLocatio
         }
     }
     
+    func retrieveFavorites() {
+        databaseRef.child(userId).getData { (error, snapshot) in
+            if let error = error {
+                print("Error getting data \(error)")
+            }
+            else if snapshot.exists() {
+                self.favorites = Array((snapshot.value as? [String : AnyObject] ?? [:]).keys)
+            }
+            else {
+                print("No data available")
+            }
+        }
+    }
 }
 
 

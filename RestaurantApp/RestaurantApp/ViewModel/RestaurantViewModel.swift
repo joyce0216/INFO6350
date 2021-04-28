@@ -24,9 +24,10 @@ class RestaurantViewModel {
                     restaurant.rating = res["rating"].floatValue
                     restaurant.status = res["business_status"].stringValue == "OPERATIONAL" ? "Open" : "Closed"
                     restaurant.address = res["vicinity"].stringValue
+                    restaurant.placeId = res["place_id"].stringValue
                     
                     if let reference = res["photos"].arrayValue[0]["photo_reference"].string {
-                        let photoURL = getRestaurantPhotoURL(reference, 250)
+                        let photoURL = getRestaurantPhotoURL(reference, 600)
                         getAFResponseData(photoURL).done{data in
                             restaurant.imageData = data
                         }.catch { error in
