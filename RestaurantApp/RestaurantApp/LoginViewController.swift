@@ -54,10 +54,11 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
     
     
     @IBAction func btnSignUp(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "signUp")
-        vc.modalPresentationStyle = .overFullScreen
-        present(vc, animated: true)
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyboard.instantiateViewController(identifier: "signUp")
+//        vc.modalPresentationStyle = .overFullScreen
+//        present(vc, animated: true)
+        self.performSegue(withIdentifier: "SignUpSegue", sender: self)
     }
     
     

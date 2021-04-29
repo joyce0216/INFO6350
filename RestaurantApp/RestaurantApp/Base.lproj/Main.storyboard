@@ -129,7 +129,9 @@
                                     <constraint firstAttribute="height" constant="40" id="CRH-0J-s9b"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Sign Up"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="0.86163546950000003" green="0.54519377339999997" blue="0.58727003659999999" alpha="0.90397581339999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="btnSignUp:" destination="8LA-0b-Ebf" eventType="touchUpInside" id="Hv5-3z-7DF"/>
                                 </connections>
@@ -140,7 +142,9 @@
                                     <constraint firstAttribute="height" constant="40" id="XI1-K3-p1Q"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Already Have an Account? Login"/>
+                                <state key="normal" title="Already Have an Account? Login">
+                                    <color key="titleColor" red="0.86163546950000003" green="0.54519377339999997" blue="0.58727003659999999" alpha="0.90397581339999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="btnBackLogin:" destination="8LA-0b-Ebf" eventType="touchUpInside" id="ynk-5Q-2lr"/>
                                 </connections>
@@ -153,6 +157,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yta-wa-0Cc">
+                                <rect key="frame" x="50" y="658" width="314" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fxN-aj-0h7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aYd-ya-Kov"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -164,23 +177,27 @@
                             <constraint firstItem="6zA-Qo-jl6" firstAttribute="leading" secondItem="aYd-ya-Kov" secondAttribute="leading" constant="20" id="GqB-1w-Md7"/>
                             <constraint firstItem="6zA-Qo-jl6" firstAttribute="top" secondItem="cLG-Vq-O8s" secondAttribute="bottom" constant="50" id="Gye-EH-xpP"/>
                             <constraint firstItem="aYd-ya-Kov" firstAttribute="trailing" secondItem="6zA-Qo-jl6" secondAttribute="trailing" constant="20" id="Hka-l8-Jse"/>
+                            <constraint firstItem="yta-wa-0Cc" firstAttribute="leading" secondItem="aYd-ya-Kov" secondAttribute="leading" constant="50" id="LGm-an-eKa"/>
+                            <constraint firstItem="yta-wa-0Cc" firstAttribute="top" secondItem="q1Z-Bw-PLC" secondAttribute="bottom" constant="30" id="Ysf-Kl-yiQ"/>
                             <constraint firstItem="aYd-ya-Kov" firstAttribute="trailing" secondItem="q1Z-Bw-PLC" secondAttribute="trailing" constant="20" id="aSV-wm-M3V"/>
                             <constraint firstItem="6zA-Qo-jl6" firstAttribute="top" secondItem="cLG-Vq-O8s" secondAttribute="bottom" constant="50" id="dLp-Np-kYI"/>
                             <constraint firstItem="q1Z-Bw-PLC" firstAttribute="leading" secondItem="aYd-ya-Kov" secondAttribute="leading" constant="20" id="gtu-My-ewW"/>
                             <constraint firstItem="gY2-XY-4dW" firstAttribute="leading" secondItem="aYd-ya-Kov" secondAttribute="leading" constant="20" id="iBC-MQ-iC5"/>
                             <constraint firstItem="q1Z-Bw-PLC" firstAttribute="top" secondItem="gY2-XY-4dW" secondAttribute="bottom" constant="50" id="rH8-zy-U5g"/>
+                            <constraint firstItem="aYd-ya-Kov" firstAttribute="trailing" secondItem="yta-wa-0Cc" secondAttribute="trailing" constant="50" id="x0N-4N-G0C"/>
                             <constraint firstItem="cLG-Vq-O8s" firstAttribute="top" secondItem="aYd-ya-Kov" secondAttribute="top" constant="200" id="x22-DI-ZCp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="SignUp" id="d2x-IA-z4d"/>
                     <connections>
+                        <outlet property="lblstatus" destination="yta-wa-0Cc" id="tEg-CK-E5z"/>
                         <outlet property="txtEmail" destination="cLG-Vq-O8s" id="R64-Fn-5Zq"/>
                         <outlet property="txtPassword" destination="6zA-Qo-jl6" id="rlu-L3-u5t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yfk-ZD-sbJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1428" y="-361"/>
+            <point key="canvasLocation" x="-25" y="-522"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BEH-q9-N8X">
@@ -212,7 +229,7 @@
                                 <rect key="frame" x="0.0" y="295" width="414" height="567"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="182" translatesAutoresizingMaskIntoConstraints="NO" id="eQv-R6-wPK">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="182" translatesAutoresizingMaskIntoConstraints="NO" id="eQv-R6-wPK">
                                         <rect key="frame" x="0.0" y="28" width="414" height="182"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eQv-R6-wPK" id="8bJ-ug-mv8">
@@ -234,7 +251,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="nWp-yK-m45"/>
                                 </constraints>
-                                <state key="normal" title="Show Favorite"/>
+                                <state key="normal" title="Show Favorite">
+                                    <color key="titleColor" red="0.86163546950000003" green="0.54519377339999997" blue="0.58727003659999999" alpha="0.90397581339999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="clickOnShowFavorite:" destination="VnI-5k-9wS" eventType="touchDown" id="b3D-GX-7rA"/>
                                 </connections>

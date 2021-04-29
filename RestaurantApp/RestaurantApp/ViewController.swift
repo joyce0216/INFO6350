@@ -35,8 +35,9 @@ class ViewController: UIViewController, UINavigationControllerDelegate,CLLocatio
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tblRestaurant.estimatedRowHeight = 200
-        self.tblRestaurant.rowHeight = UITableView.automaticDimension
+        //self.tblRestaurant.estimatedRowHeight = 200
+        //self.tblRestaurant.rowHeight = UITableView.automaticDimension
+        self.tblRestaurant.rowHeight = 200
         
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()

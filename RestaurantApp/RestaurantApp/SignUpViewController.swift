@@ -15,23 +15,33 @@ class SignUpViewController: UIViewController,UINavigationControllerDelegate{
     
     @IBOutlet weak var txtPassword: UITextField!
     
+    
+    @IBOutlet weak var lblstatus: UILabel!
+    
 
         override func viewDidLoad() {
             super.viewDidLoad()
-
+            lblstatus.text = ""
         // Do any additional setup after loading the view.
     }
     
 
     
     @IBAction func btnSignUp(_ sender: Any) {
+        let password = txtPassword.text!
+        
         if txtEmail.text?.isEmpty == true {
-            print("no text in Email field")
+            lblstatus.text = "no text in Email field"
             return
         }
         
-        if txtPassword.text?.isEmpty == true {
-            print("no text in Password field")
+        if password == "" || password.count < 6 {
+            lblstatus.text = "Password Invalid"
+            return
+        }
+        
+        if txtEmail.text?.isEmail == false {
+            lblstatus.text = "Email Invalid"
             return
         }
         signUp()
@@ -52,10 +62,11 @@ class SignUpViewController: UIViewController,UINavigationControllerDelegate{
                 return
             }
             
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(identifier: "Login")
-            vc.modalPresentationStyle = .overFullScreen
-            self.present(vc, animated: true)
+            self.lblstatus.text = "Successful Registered! Please Login!"
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc = storyboard.instantiateViewController(identifier: "Login")
+//            vc.modalPresentationStyle = .overFullScreen
+//            self.present(vc, animated: true)
             
         }
         
