@@ -52,7 +52,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate,CLLocatio
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("RestaurantTableViewCell", owner: self, options: nil)?.first as! RestaurantTableViewCell
         
-        cell.lblName.text = "Name: \(restaurantArr[indexPath.row].resName) "
+        cell.lblName.text = "\(restaurantArr[indexPath.row].resName) "
         cell.lblRating.text = "Rating: \(restaurantArr[indexPath.row].rating)"
         cell.lblAddress.text = "Address: \(restaurantArr[indexPath.row].address)"
         cell.lblStatus.text = "Status: \(restaurantArr[indexPath.row].status)"
